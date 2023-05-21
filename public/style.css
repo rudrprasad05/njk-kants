@@ -746,13 +746,14 @@ input:focus, textarea:focus{
 }
 
 .pointer{
-    background: url(./img/icon/greater-then.png);
+    background: url(/assets/greater-then.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
     border-radius: 50%;
     width: 50px;
     height: 50px;
+    cursor: pointer;
 }
 
 .pointer-left{
@@ -840,7 +841,7 @@ input:focus, textarea:focus{
 
 
 
-#car::after{
+#car-img::after{
     background: radial-gradient(circle at 100% 100%, yellow 20%, transparent);
     width: 20px;
     height: 20px;
@@ -856,7 +857,7 @@ input:focus, textarea:focus{
 }
 
 
-#car::before{
+#car-img::before{
     background: radial-gradient(circle at 100% 100%, yellow 20%, transparent);
     width: 20px;
     height: 20px;
@@ -870,7 +871,7 @@ input:focus, textarea:focus{
     opacity: 0;
 }
 
-#car{
+#car-img{
     position: fixed;
     z-index: 100;
     bottom: -200px;
@@ -881,11 +882,11 @@ input:focus, textarea:focus{
     transition: 0.5s;
 
 }
-#car > a > img{
+#car-img > a > img{
     width: 120px;
 }
 
-#car:hover:after, #car:hover:before{
+#car-img:hover:after, #car-img:hover:before{
     opacity: 1;
 }
 .car-gone{
@@ -896,7 +897,7 @@ input:focus, textarea:focus{
 
 footer{
     padding: 20px 50px;
-    border-top: px solid var(--main-pink);
+    border-top: 1px solid var(--main-pink);
 }
 
 .footer-upper{

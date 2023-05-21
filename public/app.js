@@ -1,5 +1,5 @@
-// nav
-let car = document.getElementById("car")
+
+let carImg = document.getElementById("car-img")
 let nav = document.getElementById("nav");
 let ham1 = document.getElementById("ham1");
 let ham2 = document.getElementById("ham2");
@@ -18,7 +18,7 @@ let year = new Date().getFullYear();
 
 function navOpen(){
   try{
-    car.classList.toggle("car-gone");
+    carImg.classList.toggle("car-gone");
   }catch{
 
   }
@@ -28,28 +28,25 @@ function navOpen(){
   ham2.classList.toggle("ham2-open-nav");
   ham3.classList.toggle("ham3-open-nav");
 
-  
-
 }
 
 
 try{
 
-  if (width < 475)
-  {
-    car.style.display = 'none';
+    if (width < 475)
+    {
+        carImg.style.display = 'none';
 
 
-  }
-  else if (width > 475){
-    car.style.display = 'block';
-    window.addEventListener('scroll', carScroll)
-  }
+    }
+    else if (width > 475){
+        carImg.style.display = 'block';
+        window.addEventListener('scroll', carScroll)
+    }
 
 }catch{
 
-}
-
+    }
 
 function carScroll()
 {
@@ -57,15 +54,10 @@ function carScroll()
 
 
   if (value > 100 && value < (scrollHeight - 800)){
-    car.style.bottom = "10px"
+    carImg.style.bottom = "10px"
   }
   else{
-    car.style.bottom = "-200px"
+    carImg.style.bottom = "-200px"
   }
 
 }
-
-
-
-copyright.textContent = `© ${year} Bismuth Web Designs. All rights reserved.`
-

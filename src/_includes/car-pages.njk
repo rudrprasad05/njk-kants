@@ -1,0 +1,137 @@
+---
+layout: 'base.njk'
+---
+
+
+<p class="pink main-font text-align-center margin-40px">{{title}}</p>
+    
+        <div class="small-font white cars-text-holder">
+            <div class="text-text">
+                <p>
+                    Introducing the Honda Insight, where innovation meets elegance, proudly presented by our premier rental company!
+                </p>
+
+                <p class="unwanted">
+                    {{description}}
+                </p>
+
+                <p class="unwanted">
+                    Immerse yourself in the refined and luxurious interior of the Honda Insight, where comfort and style harmoniously blend. From the premium materials to the advanced features, every detail is meticulously crafted to enhance your journey.
+
+                </p>
+                <p class="unwanted">
+                    At our rental company, your satisfaction and convenience are our top priorities. With competitive rates, flexible rental options, and exceptional customer service, we ensure a seamless and enjoyable Honda Insight rental experience.
+
+
+                </p>
+                <p>
+                    <span class="unwanted">Don't miss out on the opportunity to drive the Honda Insight and embrace a new level of elegance and efficiency.</span>  Book your rental today and embark on a journey where style, innovation, and sustainability converge. Contact us now to reserve your Honda Insight and experience the future of driving!
+
+                </p>
+            </div>
+
+            
+            
+            
+        </div>
+
+        <div class="car-details">
+            <div class="car-details-card">
+
+                <div class="car-img-details">
+                    <img src="/assets/car.png" alt="">
+                </div>
+                <p class="small-font text-align-center vertical-align-text">{{title}}</p>
+
+            </div>
+
+            <div class="car-details-card">
+
+                <div class="car-img-details">
+                    <img src="/assets/$2.png" alt="">
+                </div>
+                <p class="small-font text-align-center vertical-align-text">{{post.data.price}} <span class="unwanted">/ day</span></p>
+
+            </div>
+
+            <div class="car-details-card">
+
+                <div class="car-img-details">
+                    <img src="/assets/phone.png" alt="">
+                </div>
+                <p class="small-font text-align-center vertical-align-text"><a href="tel:9952537">9952537</a> </p>
+
+            </div>
+
+        </div>
+
+        <div class="wrapper">
+            <div id="left" class="pointer pointer-left">
+                <div class="arrow arrow1"></div>
+                <div class="arrow arrow2"></div>
+            </div>
+            <div class="carosel">
+
+                {%- for i in image -%}
+
+                    <img src="{{ image[loop.index0] }}" alt="" srcset="">
+
+                {%- endfor %}
+
+                
+            </div>
+        <div id="right" class="pointer pointer-right"></div>
+        </div>
+        
+<script>
+
+const carousel = document.querySelector(".carosel");
+let arrowIcons = document.querySelectorAll(".pointer"); 
+
+let firstImg = carousel.querySelectorAll("img")[0]
+let isDragStart = false, prevPageX, prevScrollLeft
+let firstImageWidth = firstImg.clientWidth + 14
+let scrollWidthCaro = carousel.scrollWidth - carousel.clientWidth
+
+const showHiddenIcons = () => {
+    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+    arrowIcons[1].style.display = carousel.scrollLeft == scrollWidthCaro ? "none" : "block";
+} 
+
+arrowIcons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        carousel.scrollLeft += icon.id == "left" ? -firstImageWidth : firstImageWidth
+        setTimeout(()=> showHiddenIcons(), 60) 
+    })
+}) 
+
+const dragStart = (e)=>{
+    isDragStart = true;
+    prevPageX = e.pageX;
+    prevScrollLeft = carousel.scrollLeft
+    
+}
+
+const dragging = (e)=>{
+    if(!isDragStart){
+        return;
+    }
+    e.preventDefault();
+    carousel.classList.add("dragging")
+    let positionDiff =  e.pageX - prevPageX
+    carousel.scrollLeft = prevScrollLeft - positionDiff;
+    showHiddenIcons()
+}
+
+const dragEnd = (e) => {
+    isDragStart = false
+    carousel.classList.remove("dragging")
+    
+}
+
+carousel.addEventListener("mousemove", dragging);
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mouseup", dragEnd);
+
+
+</script>
