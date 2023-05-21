@@ -8,25 +8,21 @@ layout: 'base.njk'
         <div class="small-font white cars-text-holder">
             <div class="text-text">
                 <p>
-                    Introducing the Honda Insight, where innovation meets elegance, proudly presented by our premier rental company!
+                    {{p1}}
                 </p>
 
                 <p class="unwanted">
-                    {{description}}
+                    {{p2}}
                 </p>
 
                 <p class="unwanted">
-                    Immerse yourself in the refined and luxurious interior of the Honda Insight, where comfort and style harmoniously blend. From the premium materials to the advanced features, every detail is meticulously crafted to enhance your journey.
-
+                    {{p3}}
                 </p>
                 <p class="unwanted">
-                    At our rental company, your satisfaction and convenience are our top priorities. With competitive rates, flexible rental options, and exceptional customer service, we ensure a seamless and enjoyable Honda Insight rental experience.
-
-
+                    {{p4}}
                 </p>
                 <p>
-                    <span class="unwanted">Don't miss out on the opportunity to drive the Honda Insight and embrace a new level of elegance and efficiency.</span>  Book your rental today and embark on a journey where style, innovation, and sustainability converge. Contact us now to reserve your Honda Insight and experience the future of driving!
-
+                    {{p5}}
                 </p>
             </div>
 
@@ -50,7 +46,7 @@ layout: 'base.njk'
                 <div class="car-img-details">
                     <img src="/assets/$2.png" alt="">
                 </div>
-                <p class="small-font text-align-center vertical-align-text">{{post.data.price}} <span class="unwanted">/ day</span></p>
+                <p class="small-font text-align-center vertical-align-text">{{price}} <span class="unwanted">/ day</span></p>
 
             </div>
 
@@ -59,7 +55,7 @@ layout: 'base.njk'
                 <div class="car-img-details">
                     <img src="/assets/phone.png" alt="">
                 </div>
-                <p class="small-font text-align-center vertical-align-text"><a href="tel:9952537">9952537</a> </p>
+                <p class="small-font text-align-center vertical-align-text"><a href="tel:{%mobile%}">{%mobile%}</a> </p>
 
             </div>
 

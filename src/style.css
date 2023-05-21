@@ -946,6 +946,37 @@ footer{
     letter-spacing: 2px;
 }
 
+.mobile-numbers{
+    width: 100vw;
+    height: 100dvh;
+
+}
+.mobile-numbers-text{
+    display: grid;
+    place-items: center;
+    padding: 50px 100px;
+    height: 80%;
+}
+.email p, .mobile p{
+    padding: 20px;
+} 
+
+.mobile-numbers p{
+    text-align: center;
+}
+.mobile-number-cards{
+    display: grid;
+    width: 80%;
+    gap: 100px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+}
+
+.mobile-number-cards img{
+    width: 50%;
+    margin-left: 25%;
+}
+
 /* ----------- meida ------------ */
 
 

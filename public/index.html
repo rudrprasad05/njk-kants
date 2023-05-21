@@ -23,8 +23,8 @@
     <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/cars">Cars</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
     </ul>
     <div class="social-media">
         <div>
@@ -40,7 +40,7 @@
             
         </div>
         <div>
-            <a href="#">
+            <a href="tel:9952537">
                 <img src="/assets/phone.png" alt="">
             </a>
             
@@ -70,7 +70,7 @@
             
             <button class="landing-buttons">
                 <div class="small-font vertical-align-text">
-                    Book Now
+                    <a href="#contact">Book Now</a>
                 </div>
                 <div class="white-arrow-cont">
                     <img src="./assets/white-arrow.png" alt="" srcset="">
@@ -85,7 +85,7 @@
             <p class="pink main-font vertical-align-text">Rentals</p>
             <p class="white vertical-align-text medium-font">Whether it be luxury or sport we've got it all. Known as the best car rental company on the west coast we have cars for all occasions.</p>
             <div>
-                <p class="pink vertical-align-text small-font"><a href="./cars/car.html">Our Car Collection</a></p>
+                <p class="pink vertical-align-text small-font"><a href="/cars">Our Car Collection</a></p>
                 <div class="white-arrow-cont">
                     <img src="./assets/pink-arrow.png" alt="" srcset="">
                 </div>
@@ -94,11 +94,11 @@
     </section><section class="section">
         <div class="car-cont">
             <div class="car-img-cont-main">
-                <img src="/assets/axio1.jpg,/assets/axio2.jpg,/assets/axio3.jpg,/assets/axio4.jpg,/assets/axio5.jpg" alt="This is a test">
+                <img src="/assets/axio1.jpg" alt="Toyota Axio Sedan">
             </div>
             <div class="car-description-cont">
                 <p class="car-name pink main-font text-align-center">Toyota Axio</p>
-                <p class="description white small-font">The Popular Toyota Axio Sedan, a sleek and stylish vehicle that&#39;s perfect for both business and pleasure. With its spacious interior, smooth ride, and fuel-efficient engine, the Toyota Axio Sedan is the ideal car for any occasion.</p>
+                <p class="description white small-font">At our rental company, we offer the popular Toyota Axio Sedan, a sleek and stylish vehicle that&#39;s perfect for both business and pleasure. With its spacious interior, smooth ride, and fuel-efficient engine, the Toyota Axio Sedan is the ideal car for any occasion.</p>
 
                 <div class="more-info-dollar">
                     <a href="/cars/axio/">
@@ -122,7 +122,7 @@
     </section><section class="section">
         <div class="car-cont">
             <div class="car-img-cont-main">
-                <img src="/assets/fielder1.jpg" alt="This is a test">
+                <img src="/assets/fielder1.jpg" alt="Fielder Hybrid">
             </div>
             <div class="car-description-cont">
                 <p class="car-name pink main-font text-align-center">Fielder Hybrid</p>
@@ -150,7 +150,7 @@
     </section><section class="section">
         <div class="car-cont">
             <div class="car-img-cont-main">
-                <img src="/assets/fielder-wagon1.jpg" alt="This is a test">
+                <img src="/assets/fielder-wagon1.jpg" alt="Fielder Wagon">
             </div>
             <div class="car-description-cont">
                 <p class="car-name pink main-font text-align-center">Fielder Wagon</p>
@@ -178,11 +178,11 @@
     </section><section class="section">
         <div class="car-cont">
             <div class="car-img-cont-main">
-                <img src="/assets/insight1.jpg" alt="This is a test">
+                <img src="/assets/insight.jpg" alt="Honda Insight">
             </div>
             <div class="car-description-cont">
                 <p class="car-name pink main-font text-align-center">Honda Insight</p>
-                <p class="description white small-font">Experience the perfect combination of sophistication and efficiency with the Honda Insight. This cutting-edge hybrid vehicle is designed to elevate your driving experience while minimizing your environmental impact.</p>
+                <p class="description white small-font">Experience the perfect fusion of style, versatility, and sustainability with the Toyota Fielder Hybrid. This dynamic and eco-friendly vehicle is designed to elevate your journey, whether you&#39;re embarking on a family road trip or navigating the urban jungle.</p>
 
                 <div class="more-info-dollar">
                     <a href="/cars/insight/">
@@ -210,7 +210,7 @@
             </div>
             <div class="car-description-cont">
                 <p class="car-name pink main-font text-align-center">Toyota Prius</p>
-                <p class="description white small-font">Unleash the power of eco-conscious driving with the Toyota Prius. Its hybrid engine delivers impressive fuel economy, reducing your carbon footprint without compromising on performance. Experience the thrill of gliding silently through the city streets, knowing that you&#39;re making a positive impact on the environment</p>
+                <p class="description white small-font">Unleash the power of eco-conscious driving with the Toyota Prius. Its hybrid engine delivers impressive fuel economy, reducing your carbon footprint without compromising on performance. Experience the thrill of gliding silently through the city streets, knowing that you&#39;re making a positive impact on the environment.</p>
 
                 <div class="more-info-dollar">
                     <a href="/cars/prius/">
@@ -234,7 +234,7 @@
     </section><section class="section">
         <div class="car-cont">
             <div class="car-img-cont-main">
-                <img src="/assets/wish1.jpg" alt="This is a test">
+                <img src="/assets/wish.jpg" alt="This is a test">
             </div>
             <div class="car-description-cont">
                 <p class="car-name pink main-font text-align-center">Toyota Wish</p>
@@ -261,9 +261,11 @@
         </div>
     </section>
 
-    <section class="contact-section">
+    
+    
+<section class="contact-section" method="POST" id="contact">
       
-        <div class="contact-container">
+        <div class="contact-container" method="POST">
             <p class="pink vertical-align main-font">Contact Us</p>
             <form action="https://formsubmit.co/574145bdb548ca10e91ce109215be150" method="POST">
                 <div class="form-group">
@@ -272,8 +274,12 @@
                             <input type="text" name="name" class="form-control" placeholder="Full Name" required>
                         </div>
 
+
                         <div class="col">
                             <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="name" class="form-control" placeholder="Rental Car Required" required>
                         </div>
                     </div>
                 </div>
@@ -285,7 +291,7 @@
                     Send
                 </button>
     
-                <input type="hidden" name="_next" value="https://kantsrentals.netlify.app/thanks.html">
+                <input type="hidden" name="_next" value="/thanks">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_autoresponse" value="Dear Valued Customer. We have received your email and will be with you shortly. If it is important then feel free to contact us on mobile: (679) 9261-933">
     
@@ -319,10 +325,10 @@
                 <a href="cars" class="xtra-small-font white">
                     Cars
                 </a>
-                <a href="about.html" class="xtra-small-font white">
+                <a href="about" class="xtra-small-font white">
                     About
                 </a>
-                <a href="contact.html" class="xtra-small-font white">
+                <a href="contact" class="xtra-small-font white">
                     Contact
                 </a>
             </div>
@@ -344,7 +350,7 @@
                         
                     </div>
                     <div>
-                        <a href="#">
+                        <a href="tel:9952537">
                             <img src="/assets/phone.png" alt="">
                         </a>
                         

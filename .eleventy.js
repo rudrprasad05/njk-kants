@@ -7,6 +7,8 @@ module.exports = function(eleventyConfig){
     eleventyConfig.addPassthroughCopy("./src/assets");
     eleventyConfig.addPassthroughCopy("./src/admin");
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+    eleventyConfig.addShortcode("mobile", () => `9952537`);
+
 
     eleventyConfig.addFilter("postDate", (dateObj) => {
 
