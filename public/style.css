@@ -12,13 +12,14 @@ html{
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
     font-weight: 300;
-
+    
 }
 
 img{
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+    aspect-ratio: 16/9;
 }
 button{
     all: unset;
@@ -184,6 +185,13 @@ body{
 .landing-buttons:hover, .more-info:hover{
     box-shadow: 0px 0px 15px black;
     scale: 1.05;
+}
+
+
+#landing > img{
+    width: 100vw;
+    object-fit: cover;
+    height: 100dvh;
 }
 
 .white-arrow-cont{
@@ -411,7 +419,7 @@ nav > ul > li:hover:after{
 }
 
 .description{
-    text-align: justify;
+    word-wrap: break-word;
     margin-top: 40px;
 }
 
