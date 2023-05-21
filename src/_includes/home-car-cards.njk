@@ -1,0 +1,29 @@
+<section class="section">
+        <div class="car-cont">
+            <div class="car-img-cont-main">
+                <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}">
+            </div>
+            <div class="car-description-cont">
+                <p class="car-name pink main-font text-align-center">{{ post.data.title }}</p>
+                <p class="description white small-font">{{ post.data.description }}</p>
+
+                <div class="more-info-dollar">
+                    <a href="{{ post.url }}">
+                        <button class="more-info small-font white">
+                            More Info
+                        </button>
+                    </a>
+                    
+                    <div class="dollar-cont">
+                        <div class="dollar-sign-img-cont">
+                            <img src="/assets/$.png" alt="" srcset="">
+                        </div>
+                        <p class="small-font pink">
+                            {{ post.data.price }}
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>

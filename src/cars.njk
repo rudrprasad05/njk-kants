@@ -1,7 +1,19 @@
 ---
 
-title: Kants Rentals
+title: Cars
+page_title: Cars
 layout: 'base.njk'
 
 ---
 
+<p class="main-font pink text-align-center margin-40px">Our Cars</p>
+
+<div class="car-collection-cont">
+
+{%- for post in collections.post -%}
+
+    {% include "car-cards.njk" %}
+
+{%- endfor %}
+
+</div
